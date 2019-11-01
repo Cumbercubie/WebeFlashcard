@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+	
+	<div class="container">
 	<h1>Create Flashcard</h1>
 	{!! Form::open(['action' => 'FlashcardsController@store','method'=>'POST']) !!}
 		<div class="form-group">
@@ -21,4 +23,5 @@
 		</div>
 		{{Form::submit('submit',['class'=>'btn btn-primary '])}}
 	{!! Form::close()  !!}
+	</div>
 @endsection

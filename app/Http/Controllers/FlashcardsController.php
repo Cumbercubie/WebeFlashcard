@@ -18,7 +18,7 @@ class FlashcardsController extends Controller
         //take only 1 record
         /*$cards=Flashcard::orderBy('id','desc')->take(1)->get();*/
 
-        $cards=Flashcard::orderBy('id','desc')->paginate(1);            
+        /*$cards=Flashcard::orderBy('id','desc')->paginate(1);  */          
         //$cards  = Flashcard::orderBy('id','desc')->get();
         //$card = Flashcard::where('word','environment')->get();
         //$cards = DB::select('SELECT * FROM flashcards')

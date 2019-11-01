@@ -1,9 +1,13 @@
 @extends('layouts.app')
 @section('content')
-	<a href="/flashcards" class="btn btn-default"> Go back</a>
+	<link rel="stylesheet" href="{{asset('css/flashcard_show_style.css')}}">
+	
+	<div class="container">
+	<a href="/flashcards" class="btn btn-primary"> Go back</a>
 	<h1>{{$card->word}}</h1>
-	<small>Written on {{$card->created_at}}</small>
-	<div>
+	<div id="cardTranslation"> 
 		{{$card->translation}}
+	</div>
+	<small>Written on {{$card->created_at}}</small>
 	</div>
 @endsection

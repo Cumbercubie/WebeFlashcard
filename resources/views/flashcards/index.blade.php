@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+	<div class="container">
 	<h1>Flashcard</h1>
 	@if(count($flashcards)>0)
 		@foreach($flashcards as $card)
@@ -12,4 +13,5 @@
 	@else
 		<p>No cards found</p>
 	@endif
+	</div>
 @endsection
