@@ -13,6 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <a href="flashcards/create" class="btn btn-primary">
+                        Create Post
+                    </a>
                     You are logged in!
                     {{-- <div>
                         Your information here:
@@ -23,7 +26,7 @@
                         <h5>Email:</h5>
                         <p>{{$User->email}}</p>
                     </div> --}}
-                    @if(count($User)>0)
+                    {{-- @if(count($User)>0)
                         @foreach ($User as $user)
                             <div class="card-body">
                                 <h3><a href="/flashcards/{{$user->id}}">{{$user->name}}</a></h3>
@@ -32,9 +35,30 @@
                         @endforeach
                     @else 
                         <div>Can't find any user</div>
-                    @endif
+                    @endif --}}
+                    
                 </div>
               
+            </div>
+            <br>
+            <div>
+                <div class="card-header"> Your Flashcards</div>
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Title</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        @foreach($cards as $card)
+                            <tr>
+                                <th>{{$card->word}}</th>
+                                <th>
+                                    <a href="/flashcards/{{$card->id}}" class="btn btn-default"> Edit</a>
+                                </th>
+                            </tr>
+                        @endforeach
+                    </table>
+                </div>
             </div>
         </div>
     </div>

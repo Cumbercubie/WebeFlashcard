@@ -11,6 +11,13 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{asset('js/constants.js')}}" defer></script>
+    <script src="{{asset('js/flashcard.js')}}" defer></script>
+    <script src="{{asset('js/flashcard-screen.js')}}" defer></script>
+    <script src="{{asset('js/menu-screen.js')}}" defer></script>
+    <script src="{{asset('js/results-screen.js')}}" defer></script>
+    <script src="{{asset('js/flashcard_app.js')}}" defer></script>
+    <script src="{{asset('js/main.js')}}" defer></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -18,6 +25,9 @@
     <!-- Styles -->
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
+    {{-- <link rel="stylesheet" href="{{asset('css/flashcard-style.css')}}"/> --}}
+   
 </head>
 <body>
     <div id="app">

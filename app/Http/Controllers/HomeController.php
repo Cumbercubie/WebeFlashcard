@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Flashcard;
 class HomeController extends Controller
 {
     /**
-     * Create a new co ntroller instance.
+     * Create a new controller instance.
      *
      * @return void
      */
@@ -23,8 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = auth()->user();
-        $users = User::all();
-        return view('home')->with('User',$users);
+        $userID = auth()->user()->id;
+        $user = User::find($userID);
+        /*$users = User::all();*/
+        return view('home')->with('cards',$user->flashcards);/*->with('User',$users);*/
     }
 }

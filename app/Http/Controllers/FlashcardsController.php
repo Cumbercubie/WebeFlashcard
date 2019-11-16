@@ -59,6 +59,7 @@ class FlashcardsController extends Controller
         $card->definition = $request->input('definition');
         $card->imageUrl = '';
         $card->audioUrl = '';
+        $card->userID = auth()->user()->id;
         $card->save();
         return redirect('/flashcards')->with('success','Flashcard Created');
 
